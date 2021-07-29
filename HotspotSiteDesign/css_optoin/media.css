@@ -1,0 +1,55 @@
+                       /*Start media for mobile and tablite*/
+@media (max-width:767px){
+   /*de llnav bar 34an El-padding kber*/
+   .navbar-inverse .navbar-nav > li > a{
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    /*de llscroll ely fe elnavbar bta3 el-drobdwon menu*/
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+        max-height: none;
+    }
+    /*de ll-subscribe*/
+    .subscribe .form-control{
+        margin-right:0px;
+        margin-bottom: 20px;
+        width:100%;
+        text-align: center;
+    }
+    /*de ll-option-box*/
+    .option-box{
+    top:27px;
+    left:50%;
+   }
+}
+                                /*End media*/    
+/*******************************************************************************************/
+/*******************************************************************************************/
+                       /*Start media for sm screen*/
+@media (min-width:768px) and (max-width:991px){
+    
+    
+    
+}
+                                /*End media*/    
+/*******************************************************************************************/
+/*******************************************************************************************/
+                      /*Start media for md screen*/
+@media (min-width:992px) and (max-width:1199px){
+    
+    
+    
+}
+                                /*End media*/    
+/*******************************************************************************************/
+/*******************************************************************************************/
+                       /*Start media for Large screen*/
+@media (min-width:1200px){
+    
+    
+    
+}
+                                /*End media*/    
+/*******************************************************************************************/
+/*******************************************************************************************/
+

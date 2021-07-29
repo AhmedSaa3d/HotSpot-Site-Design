@@ -1,0 +1,514 @@
+/*******************************************************************************************/
+                         /* comn Css */
+body{
+    padding-top:70px;
+    overflow: hidden;/*de btesh elscroll h4elha fe eljquery*/
+}
+h1{
+    margin-bottom: 40px;
+    font-family:"Droid sans";
+}
+h3{
+    color:#2ecc71;
+    font-family:"Droid sans";
+}
+p{
+    color:#91979a;
+     font-family:"Droid sans";
+     line-height:1.5;
+}
+img {
+    width:100%;
+    height: 100%;
+}
+/*******************************************************************************************/
+                          /*Start loading-screen*/          
+.load-screen {
+    color: #FFF;
+    background: #333;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+/*code gahz*/    
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+}
+.cube1, .cube2 {
+  background-color: #2ecc71;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+@-webkit-keyframes sk-cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+@keyframes sk-cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+                          /*End loading-screen*/
+/*******************************************************************************************/
+                          /*Start arrow-top*/
+.arrow-top{
+   position: fixed;
+    bottom:5%;
+    right: 5%;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+}                          
+.arrow-top i{
+    color:#e21b17;
+    background: #2ecc71;
+    border-radius: 50%;
+    opacity: .3;
+     -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.arrow-top i:hover{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 1;
+    background: #e21b17;
+    color:#2ecc71;
+}    
+                           /*End arrow-top*/
+/*******************************************************************************************/
+                         /* start option box */
+.option-box{
+    position: fixed;
+    top:29px;
+    left:30%;
+    z-index: 9999;
+}
+.option-box i{
+    color: #2ecc71;
+    cursor: pointer;
+}
+.option-box .color-option{
+   display: none;      /*For jquery style*/
+    border: 2px solid #2ecc71;
+    padding:5px;
+    background: rgba(2,2,2,.7);
+    width:170px;
+}
+.option-box .color-option h3{margin:0 0 5px 0;}
+.option-box .color-option ul{margin:0;}
+.option-box .color-option ul li{
+    width: 20px;
+    height:20px;
+    background:#2ecc71;
+    margin: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+                         /* End option box */
+/********************************************************************************************/
+                         /* start navbar */
+/*navbar*/
+.navbar{
+    min-height: 70px;/*34an eltol yba 2d el-links hieght*/
+    background: rgba(2,2,2,.7);
+}
+/*navbar link*/    
+.navbar-inverse .navbar-nav > li > a{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-size: 16px;
+}
+/*navbar brand*//*My site logo*/
+.navbar-inverse .navbar-brand{
+    color:#bbb;
+    font-size: 30px;
+    line-height: 30px;
+}
+/*dropdwon menu*//*elgoz2 ely bynzl mn el-dropdwon-menu*/
+.navbar-nav > li > .dropdown-menu{
+    background-color:#222;
+    min-width: 200px;
+}
+.navbar-right .dropdown-menu{
+    left:0;/*Dol 34an yba fe eletgah el-englizy lw 3awzha 3rby a3ks elkim*/
+    right:auto;
+}
+/*dropdwon links*/
+.dropdown-menu > li > a{
+    color:#fff;
+    padding: 6px 20px;
+    -webkit-transition: padding .5s ease;
+    -o-transition: padding .5s ease;
+    -moz-transition: padding .5s ease;
+    transition: padding .5s ease;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus{
+    color:#fff;
+    padding-left: 25px;
+}
+/*toggle*/
+.navbar-toggle{
+    margin-top: 18px;/*de 34an azbt mkanha*/
+}
+
+                        /* End navbar */  
+/*******************************************************************************************/
+                       /*Strat slider */
+/*carousel img*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    height: 500px;
+}                       
+/*carousel caption*/
+.carousel-caption{
+    background:rgba(3,3,3,.2);
+    padding-right:20px;
+    padding-left:20px;
+    bottom:125px;
+}
+/*carousel indectators*//*Elnokt*/
+ .carousel-indicators{bottom: 0;}
+ .carousel-indicators>li{height:15px;width:15px;}
+ .carousel-indicators .active{height:17px;width:17px;}
+                        /* End Slider */  
+/*******************************************************************************************/
+/*******************************************************************************************/
+                         /*Start about us*/                      
+/*El-div el-ra2esy*/
+.about{padding-top:40px;padding-bottom:40px;}
+/*klmt elspan ely-goa h1*/
+.about span{color: #2ecc71;font-family:'Curlz MT';}
+.about .lead{margin-top:15px;font-size:25px;}
+                       /* End About us */  
+/*******************************************************************************************/
+/*******************************************************************************************/
+                        /* Start Features */
+/*El-div el-ra2esy*/
+.features{background:#EEE;padding-top:40px;padding-bottom:40px;}
+/*My div*/
+.features .feat{margin-bottom:30px;}
+/*de el-glyphicon*/
+.features .feat span {
+    font-size:25px;
+    color:#888;
+    margin-bottom: 5px;
+}
+.features .feat:hover p{
+    color: #FFF;
+}
+                       /* End Features */
+/*******************************************************************************************/
+/*******************************************************************************************/
+                       /*Start Testmonials*/
+.testmonials{padding-top:40px;padding-bottom: 40px;}
+/*de ll-div bta3 el-swr*/
+.testmonials .carousel-indicators{
+    position: static;
+    margin-left:auto;
+    width:100%;
+    padding-top:20px;
+}
+/*de llswr*/
+.testmonials .carousel-indicators li{
+   text-indent: 0;/*de gabt el-swr fe elcircle *//*7lwwwwwwww*/
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    opacity: .4;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin: 5px;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+/*de 34an elswr el-active*/
+.testmonials .carousel-indicators .active{
+    opacity: 1;
+    background: none;
+}
+                      /*End Testmonials*/  
+/*******************************************************************************************/
+/*******************************************************************************************/
+                       /*Start price-table*/
+.price-table{background:#EEE;padding-top:40px;padding-bottom: 40px}
+/*da ll-box el-abed*/
+.price-table .price-box{
+    background:#FFF;
+    padding: 10px;
+    border:1px solid #ddd;
+    margin-bottom: 5px
+}
+/*da hover ll-Price*/
+.price-table .price-box:hover p{/*de ya3ny ma a3ml hover 3la el-box y3ml kza ll-P*//*7lwaa*/
+     border:2px solid #dfdfdf;
+     -webkit-transform: scale(1.1,1.1)rotate(360deg); 
+     -moz-transform: scale(1.1,1.1)rotate(360deg);
+     -o-transform: scale(1.1,1.1)rotate(360deg);
+     transform: scale(1.1,1.1)rotate(360deg);
+}
+/*ll price*/
+.price-table .price-box p{
+    font-weight: bold;
+    font-size:28px;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background:#f3f3f3;
+    line-height: 100px;
+    border:2px solid #FFF;
+    -webkit-transition:all .7s ease; 
+    -moz-transition:all .7s ease; 
+    -o-transition:all .7s ease; 
+    transition:all .7s ease; 
+    
+}
+/*da ll-list*/
+.price-table .price-box ul{
+    line-height: 30px;
+     font-size:17px;
+}
+/*da llzorar*/
+.price-table .price-box a{
+    margin-bottom: 10px;
+}
+                                 /*End price-table*/ 
+/*******************************************************************************************/
+/*******************************************************************************************/
+                                /*Start Our Team*/
+.our-team {
+     background: url("swr/louis-amal-416845.jpg") fixed;
+     background-size:100% 100%;
+}
+/*my div*/
+.our-team .team{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #FFF;
+    background:rgba(2,2,2,.6);
+}
+/*div el-a45as*/
+.our-team .team .person{margin-bottom: 40px;}
+/*de swrt el-a45as*/
+.our-team .team .person .img1{width:150px;height:150px;}
+.our-team .team .person .img1 img{border-radius: 100%;}
+/*font awesome*//**********************************/
+.our-team .team .person i{color:#eee;}
+                                /*End Our Team*/
+/*******************************************************************************************/
+/*******************************************************************************************/
+                                /*Start Subscribe*/
+.subscribe{
+    padding-top:40px;
+    padding-bottom:40px;
+    background:#EEE;
+}
+.subscribe h1{margin-bottom: 25px;letter-spacing: 2px;}
+.subscribe .lead{font-size:25px;letter-spacing: 2px;margin-bottom: 30px;}
+/*Form input*/
+.subscribe .form-control{
+    border-radius: 0%;
+    width:300px;
+    margin-right:-3.5px;
+}
+/* form button*/
+.subscribe button{border-radius: 0%;}
+                                /*End Subscribe*/
+/*******************************************************************************************/
+/*******************************************************************************************/
+                                /*Start Statistic*/
+.static{
+    background: url(swr/close-up-of-water-splash.jpg)fixed no-repeat;
+    background-size:100% 100%;
+}
+.static .our-static{
+    padding-top:40px;
+    padding-bottom: 40px;
+    background: rgba(2,2,2,.6);
+    color:#fff;
+}
+.static .our-static .icon{margin-bottom:50px;}
+.static .our-static i{
+    color:rgba(15,78,78,.6);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.static .our-static i:hover{color: #FFF;}
+/*da EL-raqm*/
+.static .our-static p{
+    font-size:30px;
+    margin-top:15px;
+    margin-bottom:0px;
+    font-weight:bold;
+}
+/*da El-klma*/
+.static .our-static span{font-size:20px;}
+                                /*End Statistic*/    
+/*******************************************************************************************/
+/*******************************************************************************************/
+                                /*Start Skills*/
+.skills{padding-top:40px;padding-bottom: 40px;}
+.skills .skills-progress{margin-bottom: 3px;}
+/*da El-mini-3nwan*/
+.skills  h3{margin-top:0;margin-bottom:30px;}
+/*da eldiv elmlwn*/
+.skills .progress-bar{
+    font-weight: bold;
+    line-height: 27px;
+    font-size:15px;
+}
+.skills  .progress{height: 27px;}
+                                /*End Skills*/ 
+/*******************************************************************************************/
+/*******************************************************************************************/
+                              /*Start our-clients*/  
+.ourclients{background:#EEE;padding-top:40px;padding-bottom: 40px;}
+.ourclients li{margin-top:20px;margin-bottom:20px;}
+.ourclients img{
+    opacity: .4;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.ourclients img:hover{opacity:1;}
+                                /*End our-clients*/                               
+/*******************************************************************************************/
+/*******************************************************************************************/
+                                /*Start contact us*/
+.contact{
+    background:url("swr/from-car.jpg")fixed;
+    background-size:100% 100%;
+    
+}
+.contact .contact-us{
+    padding-top:40px;
+    padding-bottom:40px;
+    background:rgba(2,2,2,.7);
+    color:#FFF;
+}
+/*de 34an el-sma3a*/
+.contact .contact-us i{font-size:100px;color:#2ecc71;}
+/*de 34an el-3nwan*/
+.contact .contact-us  h1{margin-top:10px;}
+/*de 34an el-pragraph*/
+.contact .contact-us .lead{margin-bottom: 50px;}
+.contact .contact-us textarea{height: 110px;font-size:18px;}
+.contact .contact-us input,
+.contact .contact-us textarea{
+    background:rgba(82,78,78,.7);
+    color:#FFF;
+    border:none;
+}
+                                /*End contact us*/
+/*******************************************************************************************/
+/*******************************************************************************************/
+                               /*Start Footer*/
+.footer{background:#EEE;padding-top: 40px;padding-bottom: 40px;}
+.footer .col-xs-12 {margin-bottom:10px;}
+/*de ll-listst*/
+.footer .sitemap .three-columns{margin-bottom: 10px;}
+.footer .sitemap .three-columns a{color:#2ecc71;}
+.footer .sitemap .three-columns a:hover{text-decoration: none;}
+.footer .sitemap .three-columns li{margin-bottom: 10px;}
+/*de 34an swr el-social*/
+.footer .sitemap .links li{
+    float: left;
+    width:10%;
+    padding-left:5px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.footer .articles{margin-bottom: 5px;}
+/*de lldiv elra2esy*/
+.footer .articles .media {margin-bottom: 5px;}
+/*de el-sora*/
+.footer .articles .media a{width: 64px;height: 64px;}
+/*de el3nwan ely goa eldiv*/
+.footer .articles .media h3{margin-top: 0;margin-bottom: 4px;}
+                               /*End Footer*/
+/*******************************************************************************************/
+/*******************************************************************************************/
+                               /*Start copyright*/
+.copyright{
+    background:#222;
+    padding-top:10px;
+    padding-bottom: 10px;
+    color:#FFF;
+    font-size:30px;
+}
+                               /*End copyright*/
+/*******************************************************************************************/
+/*******************************************************************************************/
+.ask{
+    padding-top:40px;
+    padding-bottom: 40px;
+    background:#777;
+}
+
+.ask .klma{
+    margin-bottom:5px;
+    background: #FFF;
+}
+.ask h1{
+     background:#ddd;
+     margin-bottom: 5px;
+}
+.ask h1:before{
+    content: "\e114";
+    font-family: "Glyphicons Halflings";
+    margin: 5px;
+    color:#2ecc71;
+    float:right;
+}
+.ask .klma a{
+    font-size: 35px;
+    text-decoration: none;
+    color:#2ecc71;
+   
+}
+.ask .klma a i{
+    font-size:35px;
+    color:#e21b17;
+    margin-right:5px;
+}
+.ask p{
+    display:none
+}
+
